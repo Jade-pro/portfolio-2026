@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Jade Barthes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/img/logo-barthes-jade-site2.svg" alt="Jade Barthes" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="projets.html" class="hover-target">Projets</a></li>
+            <li><a href="index.html#about" class="hover-target">À propos</a></li>
+            <li><a href="contact.html" class="hover-target">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="contact-page">
+            <div class="contact-container">
+
+                <h1 class="reveal-text"><span>Contactez-</span> moi</h1>
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+                        <h3>Discutons de vos projets</h3>
+                        <p>Graphiste & Photographe passionnée par la capture de l'instant et le design visuel.</p>
+
+                        <ul class="info-list">
+                            <li><strong>Email :</strong> <a href="mailto:jadebarthesperso@gmail.com" class="hover-target">jadebarthesperso@gmail.com</a></li>
+                            <li><strong>Localisation :</strong> Bordeaux, France</li>
+                        </ul>
+
+                        <div class="social-links">
+                            <a href="https://www.instagram.com/pickjad/" target="_blank" class="hover-target social-icon">Instagram</a>
+                            <a href="https://www.linkedin.com/in/jade-barthes-762510387/" target="_blank" class="hover-target social-icon">LinkedIn</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form action="https://formspree.io/f/meerbovr" method="POST" class="contact-form">
+
+                            <div class="form-group">
+                                <label for="name">Nom / Entreprise</label>
+                                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Adresse Email</label>
+                                <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Décrivez votre projet..." required></textarea>
+                            </div>
+
+                            <input type="hidden" name="_subject" value="Nouveau message de ton Portfolio !">
+                            
+                            <input type="hidden" name="_next" value="merci.html">
+                            
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <button type="submit" class="btn-link hover-target">Envoyer le Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; 2026 Jade Barthes - Fait avec passion et quelques lignes de code.</p>
+            <p class="legal-text">
+                Tous droits réservés. L'ensemble des contenus (photographies, designs, logos et code) 
+                présents sur ce site sont la propriété exclusive de Jade Barthes. 
+                Toute reproduction ou utilisation sans autorisation préalable est strictement interdite.
+            </p>
+        </div>
+        
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/jade-barthes-762510387/" target="_blank" class="hover-target">LinkedIn</a>
+            <a href="https://www.instagram.com/pickjad/" target="_blank" class="hover-target">Instagram</a>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
