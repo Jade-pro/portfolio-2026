@@ -1200,3 +1200,43 @@ footer {
         margin: 0 auto;
     }
 }
+
+@media (max-width: 768px) {
+    /* 1. Suppression du curseur personnalisé sur mobile */
+    .cursor-dot, 
+    .cursor-outline {
+        display: none !important;
+    }
+
+    html, body {
+        cursor: auto !important;
+    }
+
+    /* 2. Menu et Titres */
+    .nav-links {
+        display: none; /* Cache le menu classique */
+    }
+
+    .project-hero h1 {
+        font-size: 2.2rem; /* Légèrement plus petit pour les petits écrans */
+    }
+
+    /* 3. Mise en page en une seule colonne */
+    .stories-showcase, 
+    .action-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* 4. Ajustement des images et textes */
+    .story-image img, 
+    .content-wrapper img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content-wrapper {
+        padding: 20px; /* Moins de vide sur les côtés */
+    }
+}
