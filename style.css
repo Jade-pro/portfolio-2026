@@ -1240,3 +1240,163 @@ footer {
         padding: 20px; /* Moins de vide sur les côtés */
     }
 }
+
+/* --- STYLE DU BURGER (Caché sur PC) --- */
+.burger {
+    display: none; /* Cache le burger par défaut */
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2000;
+}
+
+.burger span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: var(--accent, #b39df3); /* Utilise ta couleur violette */
+    transition: all 0.3s ease;
+}
+
+/* 1. Force l'affichage du burger uniquement sur mobile */
+.burger {
+    display: none; /* Caché sur PC */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 9999; /* Toujours au dessus */
+    position: relative;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #b39df3; /* Ton violet */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* 2. Mode Mobile (S'active sous 768px) */
+@media screen and (max-width: 768px) {
+    .burger {
+        display: flex !important; /* Force l'apparition */
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Caché à droite */
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #0e0011; /* Ton fond sombre */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s ease;
+        z-index: 9998;
+    }
+
+    /* Quand on clique (classe ajoutée par le JS) */
+    .nav-links.nav-active {
+        right: 0;
+    }
+
+    /* Animation des barres en X */
+    .toggle span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+    .toggle span:nth-child(2) { opacity: 0; }
+    .toggle span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+}
+/* --- APPARITION DU MENU MOBILE --- */
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: -100%; /* Le menu est caché à droite par défaut */
+        top: 0;
+        height: 100vh;
+        width: 100%; /* Il prend tout l'écran */
+        background-color: #0e0011; /* Ton fond violet très sombre */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        transition: right 0.5s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* C'est cette classe qui fait glisser le menu quand tu cliques */
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links li a {
+        font-family: 'Inter', sans-serif;
+        font-size: 2rem;
+        color: #ffffff;
+        text-decoration: none;
+        letter-spacing: 2px;
+        transition: color 0.3s;
+    }
+
+    .nav-links li a:hover {
+        color: #b39df3; /* Ton violet au survol */
+    }
+}
+
+/* --- ADAPTATION MOBILE (Écrans inférieurs à 768px) --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. On réduit la taille des gros titres Jade Barthes */
+    .hero-content h1 {
+        font-size: 3.5rem !important; /* Plus petit pour ne pas déborder */
+        line-height: 1.1;
+    }
+
+    /* 2. On réduit les titres de sections (Parcours, Projets) */
+    .section-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 20px;
+    }
+
+    /* 3. On agrandit le texte courant (paragraphes) pour la lisibilité */
+    .hero-sub, 
+    .about-text p, 
+    .game-footer-ui p,
+    .footer-content p {
+        font-size: 1.1rem !important; /* Texte plus grand sur petit écran */
+        line-height: 1.6; /* Plus d'espace entre les lignes pour reposer l'œil */
+        opacity: 0.9;
+    }
+
+    /* 4. On ajuste les marges pour que le texte ne colle pas aux bords */
+    .about-container, 
+    .hero-content {
+        padding: 0 10px;
+    }
+}
+
+/* Style des titres et descriptions dans l'overlay des cartes */
+.card-overlay h3 {
+    color: #b39df3; /* Texte blanc */ 
+    -webkit-text-stroke: 0.8px #000000; 
+    font-family: 'Arial', sans-serif; /* Garde ta police de titre */
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.card-overlay span {
+    color: #ffffff; /* Texte blanc */
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;  
+    font-size: 0.9rem;
+}
