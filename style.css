@@ -6,30 +6,13 @@
     --font-serif: 'Playfair Display', serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; } /* On cache le vrai curseur */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     background-color: var(--bg);
     color: var(--text);
     font-family: var(--font-main);
     overflow-x: hidden;
-}
-
-/* --- CURSEUR --- */
-.cursor-dot, .cursor-outline {
-    pointer-events: none;
-    position: fixed;
-    top: 0; left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    transition: width 0.3s, height 0.3s, background-color 0.3s;
-}
-.cursor-dot { width: 8px; height: 8px; background-color: var(--accent); }
-.cursor-outline {
-    width: 40px; height: 40px;
-    border: 2px solid var(--text);
-    transition: all 0.2s ease-out;
 }
 
 /* --- NAVIGATION --- */
@@ -419,7 +402,7 @@ h1 span {
     --font-serif: 'Playfair Display', serif;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+* { margin: 0; padding: 0; box-sizing: border-box;  }
 
 body {
     background-color: var(--bg);
@@ -922,7 +905,7 @@ nav {
     color: white;
     font-size: 40px;
     font-weight: bold;
-    cursor: none; /* Pour garder ton curseur custom */
+     /* Pour garder ton curseur custom */
     user-select: none;
     transition: color 0.3s;
 }
@@ -957,7 +940,7 @@ nav {
     background-color: rgba(14, 0, 17, 0.95);
     justify-content: center;
     align-items: center;
-    cursor: none; /* Force la disparition du curseur Windows ici aussi */
+     /* Force la disparition du curseur Windows ici aussi */
 }
 
 /* --- AJOUT SPÉCIFIQUE : SALON DES VINS --- */
@@ -970,7 +953,7 @@ nav {
 
 /* On s'assure que les images de la galerie sont bien lisibles */
 .stories-showcase img {
-    cursor: none; /* Pour que ton curseur custom fonctionne sur les images */
+     /* Pour que ton curseur custom fonctionne sur les images */
 }
 
 .carousel-container {
@@ -1027,7 +1010,7 @@ nav {
     border: none;
     padding: 20px;
     font-size: 2rem;
-    cursor: none; /* Pour ton curseur custom */
+     /* Pour ton curseur custom */
     z-index: 10;
 }
 

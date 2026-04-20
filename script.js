@@ -1,37 +1,13 @@
-// --- GESTION DU CURSEUR PERSONNALISÉ ---
-const cursorDot = document.querySelector(".cursor-dot");
-const cursorOutline = document.querySelector(".cursor-outline");
-
-window.addEventListener("mousemove", (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-
-    cursorOutline.animate({
-        left: `${posX}px`,
-        top: `${posY}px`
-    }, { 
-        duration: 400, 
-        fill: "forwards" 
-    });
-});
-
 // --- INTERACTIONS AU SURVOL (HOVER) ---
 const hoverTargets = document.querySelectorAll(".hover-target");
 
 hoverTargets.forEach(target => {
     target.addEventListener("mouseover", () => {
-        cursorOutline.style.width = "80px";
-        cursorOutline.style.height = "80px";
-        cursorOutline.style.backgroundColor = "transparent"; 
+        // No cursor effects
     });
     
     target.addEventListener("mouseleave", () => {
-        cursorOutline.style.width = "40px";
-        cursorOutline.style.height = "40px";
-        cursorOutline.style.backgroundColor = "transparent";
+        // No cursor effects
     });
 });
 
@@ -43,7 +19,7 @@ let currentIndex = 0;
 
 if (lightbox) {
     images.forEach((img, index) => {
-        img.style.cursor = 'none';
+        img.style.cursor = 'pointer';
         img.addEventListener('click', () => {
             lightbox.style.display = 'flex';
             lightboxImg.src = img.src;
