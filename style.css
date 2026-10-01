@@ -1724,6 +1724,7 @@ footer {
 .portfolio-page .nav-links { gap: 30px; }
 .portfolio-page .nav-links a { color: #f3f0ff; font: 500 12px 'Space Grotesk', sans-serif; }
 .portfolio-page .nav-links a:hover { color: var(--blue); }
+.portfolio-page .site-nav { position: relative; top: auto; left: auto; width: auto; height: auto; padding: 0; background: transparent; border: 0; box-shadow: none; z-index: 1; }
 
 .intro {
     width: 100%;
@@ -1819,6 +1820,12 @@ footer {
 .work-subtitle { display: block; margin-top: 6px; color: var(--muted); font-size: 12px; }
 .project-content { margin-top: 27px; padding: 25px; display: grid; grid-template-columns: minmax(200px, 0.8fr) 1.2fr; align-items: start; gap: 22px 34px; border-top: 1px solid #c7c1df; background: #e6e2f4; }
 .project-content > p { margin: 0; color: #4d4965; font-size: 13px; line-height: 1.8; }
+.project-more { grid-column: 1 / -1; border-top: 1px solid #c7c1df; }
+.project-more summary { min-height: 43px; display: flex; align-items: center; justify-content: space-between; color: #5342ac; font: 11px 'DM Mono', monospace; cursor: pointer; list-style: none; }
+.project-more summary::-webkit-details-marker { display: none; }
+.project-more summary::after { content: '+'; color: #4e83c7; font: 20px 'Space Grotesk', sans-serif; }
+.project-more[open] > summary::after { content: '−'; }
+.project-more-content { padding: 4px 0 8px; display: grid; grid-template-columns: minmax(200px, 0.8fr) 1.2fr; gap: 18px 34px; }
 .project-gallery { grid-column: 2; display: grid; grid-template-columns: repeat(auto-fit, minmax(115px, 1fr)); gap: 8px; }
 .project-gallery img { width: 100%; height: 130px; display: block; object-fit: cover; }
 .project-gallery-wide { grid-template-columns: repeat(auto-fit, minmax(95px, 1fr)); }
@@ -1926,6 +1933,7 @@ footer {
     .work-title { font-size: 20px; }
     .work-kind { margin-top: 13px; font-size: 9px; }
     .project-content { margin-top: 21px; padding: 20px 14px; grid-template-columns: 1fr; gap: 18px; }
+    .project-more-content { grid-template-columns: 1fr; gap: 14px; }
     .project-gallery { grid-column: 1; grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .project-gallery img { height: 120px; }
     .project-resource { grid-column: 1; }
@@ -1955,4 +1963,67 @@ footer {
     .portfolio-page *,
     .portfolio-page *::before,
     .portfolio-page *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* --- PROJECT PAGES SHARE THE PORTFOLIO ART DIRECTION --- */
+.project-page { min-height: 100vh; }
+.project-page .project-detail { max-width: 1280px; margin: 0 auto; padding: 120px 8% 100px; }
+.project-page .back-link { display: inline-flex; align-items: center; min-height: 38px; margin: 0 0 22px; padding: 0 12px; border: 1px solid #c9c4dd; color: #5c50a2; font: 10px 'DM Mono', monospace; text-decoration: none; transition: background 160ms ease, color 160ms ease; }
+.project-page .back-link:hover { background: #735de0; color: #fff; }
+.project-page .project-hero { width: 100%; height: 490px; margin: 0 auto 68px; padding: 0; border-radius: 0; background-size: cover; background-position: center; box-shadow: none; }
+.project-page .project-hero::before { background: linear-gradient(180deg, rgba(20,17,42,.04) 10%, rgba(20,17,42,.8) 100%); }
+.project-page .project-hero-overlay { padding: 42px; }
+.project-page .project-hero h1 { margin: 0 0 19px; color: #f6f3ff; font: 600 56px/1.02 'Space Grotesk', sans-serif; letter-spacing: -1.5px; text-transform: none; }
+.project-page .project-detail .meta { display: flex; flex-wrap: wrap; gap: 9px; margin: 0; color: #f6f3ff; }
+.project-page .project-detail .meta span { padding: 8px 10px; border: 1px solid rgba(245,242,255,.55); color: #f6f3ff; font: 10px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .5px; }
+.project-page .content-wrapper { max-width: 900px; margin: 0 auto; padding: 0; }
+.project-page .project-detail > h2,
+.project-page .content-wrapper h2 { margin: 46px 0 13px; color: #302653; font: 600 28px/1.2 'Space Grotesk', sans-serif; letter-spacing: -.5px; }
+.project-page .project-detail > h2:first-of-type { margin-top: 25px; }
+.project-page .content-wrapper h2:first-child { margin-top: 0; }
+.project-page .content-wrapper h3,
+.project-page .project-detail > h3 { margin: 32px 0 15px; }
+.project-page .project-detail p,
+.project-page .project-detail li { color: #625e79; font: 14px/1.85 'Space Grotesk', sans-serif; }
+.project-page .project-detail p { margin-bottom: 18px; }
+.project-page .project-detail li { margin-bottom: 7px; }
+.project-page .partie-title { margin: 58px 0 22px; color: #705bd0; font: 500 11px 'DM Mono', monospace; letter-spacing: 1.2px; text-align: left; }
+.project-page .stories-showcase { max-width: 100%; margin: 24px 0 50px; }
+.project-page .story-image { position: relative; overflow: hidden; border: 1px solid #d8d4e9; background: #e8e4f6; }
+.project-page .story-image img,
+.project-page .project-detail img { width: 100%; max-width: 100%; height: auto; max-height: none; display: block; margin: 0; border-radius: 0; object-fit: contain; filter: none; }
+.project-page .story-label { top: 12px; right: 12px; left: auto; padding: 8px 10px; background: #211c40; color: #d4caff; font: 9px 'DM Mono', monospace; letter-spacing: .5px; text-transform: uppercase; }
+.project-page .story-credits { margin: 10px 0 0; color: #8b86a0; font: 10px 'DM Mono', monospace; text-align: right; }
+.project-page .story-desc { max-width: 680px; margin: 15px auto 0; color: #6c6784; font: italic 15px/1.7 'Playfair Display', Georgia, serif; text-align: left; }
+.project-page .video-container { width: 100%; max-width: none; aspect-ratio: 16 / 9; height: auto; margin: 0; }
+.project-page .video-container iframe { width: 100%; height: 100%; display: block; border: 0; }
+.project-page .action-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 0; }
+.project-page .action-buttons .btn-link,
+.project-page .project-detail > .btn-link { min-height: 44px; padding: 0 15px; display: inline-flex; align-items: center; background: #7965df; color: #fff; font: 10px 'DM Mono', monospace; text-decoration: none; }
+.project-page .action-buttons .btn-link.outline { border: 1px solid #7965df; background: transparent; color: #5847b2; }
+.project-page .carousel-container { position: relative; width: 100%; max-width: 100%; margin: 30px 0 52px; overflow: hidden; }
+.project-page .carousel-wrapper { display: flex; transition: transform 450ms ease; }
+.project-page .carousel-slide { min-width: 100%; }
+.project-page .carousel-slide img { width: 100%; height: 520px; display: block; object-fit: cover; }
+.project-page .carousel-btn { position: absolute; top: 50%; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.7); background: #201c3dcc; color: #fff; transform: translateY(-50%); cursor: pointer; }
+.project-page .carousel-btn.prev { left: 12px; }
+.project-page .carousel-btn.next { right: 12px; }
+.project-page footer { margin-top: 0; padding: 28px 0; border-top: 1px solid #35304f; background: #14112a; }
+.project-page .footer-container { max-width: 1100px; padding: 0 7%; align-items: center; }
+.project-page .footer-content p { margin-bottom: 6px; color: #eae7f9; font: 10px/1.6 'DM Mono', monospace; }
+.project-page .footer-content .legal-text { color: #9994b2; font: 9px/1.6 'Space Grotesk', sans-serif; }
+.project-page .footer-socials a { color: #83baff; font: 10px 'DM Mono', monospace; letter-spacing: .5px; }
+
+@media (max-width: 700px) {
+    .project-page .project-detail { padding: 102px 6% 70px; }
+    .project-page .project-hero { height: 360px; margin-bottom: 47px; }
+    .project-page .project-hero-overlay { padding: 22px; }
+    .project-page .project-hero h1 { margin-bottom: 14px; font-size: 38px; letter-spacing: -.5px; }
+    .project-page .project-detail .meta { gap: 7px; }
+    .project-page .project-detail .meta span { padding: 7px 8px; font-size: 9px; }
+    .project-page .project-detail > h2,
+    .project-page .content-wrapper h2 { margin-top: 36px; font-size: 24px; }
+    .project-page .carousel-slide img { height: 300px; }
+    .project-page .footer-container { align-items: flex-start; }
+    .project-page .footer-content { min-width: 0; }
 }
