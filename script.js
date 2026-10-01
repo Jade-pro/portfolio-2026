@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.addEventListener('click', () => {
             navLinks.classList.toggle('active'); // Ouvre/ferme le menu
             burger.classList.toggle('toggle');   // Anime le burger en X
+            burger.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            burger.setAttribute('aria-label', navLinks.classList.contains('active') ? 'Fermer le menu' : 'Ouvrir le menu');
         });
 
         // Ferme le menu automatiquement quand on clique sur un lien
@@ -87,6 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 burger.classList.remove('toggle');
+                burger.setAttribute('aria-expanded', 'false');
+                burger.setAttribute('aria-label', 'Ouvrir le menu');
             });
         });
     }

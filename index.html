@@ -3,105 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jade Barthes - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Portfolio de Jade Barthes, graphiste et photographe à Bordeaux. Projets en identité visuelle, photographie et création numérique.">
+    <title>Jade Barthes — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-<body>
-
-    <nav>
-    <div class="logo">
-        <a href="index.html">
-            <img src="assets/img/logo-barthes-jade-site2.svg" alt="Jade Barthes" class="logo-img">
+<body class="portfolio-page">
+    <header class="site-header">
+        <a class="brand" href="#accueil" aria-label="Jade Barthes, accueil">
+            <span class="brand-mark">JB</span>
+            <span class="brand-name">JADE BARTHES<span>DESIGN & IMAGE</span></span>
         </a>
-    </div>
-
-    <div class="burger" id="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <ul class="nav-links" id="nav-links">
-        <li><a href="projets.html">Projets</a></li>
-        <li><a href="index.html#about">À propos</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+        <nav class="site-nav" aria-label="Navigation principale">
+            <button class="menu-toggle" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span></button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="reveal-text">Jade <br><span data-text="Barthes">Barthes</span></h1>
-                <p class="hero-sub">Graphisme & Photographie — L'art de l'équilibre visuel.</p>
+        <section class="intro" id="accueil" aria-labelledby="intro-title">
+            <div class="intro-gridline" aria-hidden="true"></div>
+            <div class="intro-copy">
+                <p class="eyebrow">Portfolio créatif · Bordeaux, France</p>
+                <h1 id="intro-title">Jade<br><span>Barthes<span class="title-period">.</span></span></h1>
+                <div class="intro-bottom">
+                    <p class="intro-text">Graphisme, photographie<br>& images qui racontent.</p>
+                    <a class="hero-link" href="#projets"><span>Explorer les projets</span><b aria-hidden="true">↘</b></a>
+                </div>
+            </div>
+            <div class="intro-visual">
+                <svg class="chat-logo" viewBox="0 0 360 360" role="img" aria-labelledby="chat-logo-title">
+                    <title id="chat-logo-title">Logo de Jade Barthes en forme de bulles de discussion</title>
+                    <path class="chat-bubble-back" d="M170 38h108a39 39 0 0 1 39 39v86a39 39 0 0 1-39 39h-19v43l-53-43h-36a39 39 0 0 1-39-39V77a39 39 0 0 1 39-39Z"></path>
+                    <path class="chat-bubble-front" d="M82 105h108a39 39 0 0 1 39 39v86a39 39 0 0 1-39 39h-19v43l-53-43H82a39 39 0 0 1-39-39v-86a39 39 0 0 1 39-39Z"></path>
+                    <circle class="chat-dot" cx="98" cy="187" r="8"></circle>
+                    <circle class="chat-dot" cx="136" cy="187" r="8"></circle>
+                    <circle class="chat-dot" cx="174" cy="187" r="8"></circle>
+                </svg>
             </div>
         </section>
 
-<section id="projects" class="section">
-    <h2 class="section-title">Un avant goûts de mes projets? <span>/01</span></h2>
-    <div class="project-grid">
-        
-        <a href="musee-imprimerie.html" class="project-card hover-target">
-            <div class="card-inner">
-                <img src="assets/img/mediatheque.png" alt="Musée de l'imprimerie" class="card-img">
-                <div class="card-overlay">
-    <h3>Mon premier site</h3> <span>Web Design / Nantes</span>
-</div>
-            </div>
-        </a>
-
-        <a href="Skin-Stories-Project.html" class="project-card hover-target">
-            <div class="card-inner">
-                <img src="assets/img/P1162519.jpg" alt="Projet Photo" class="card-img">
-                <div class="card-overlay">
-                    <h3>Skin Stories Project</h3>
-                    <span>Photographie</span>
+        <section class="tools-band" id="outils" aria-label="Applications créatives maîtrisées">
+            <div class="tools-track">
+                <div class="tools-set">
+                    <span class="tool-name"><b>Ps</b> Photoshop</span><i aria-hidden="true">✳</i>
+                    <span class="tool-name"><b>Ai</b> Illustrator</span><i aria-hidden="true">✳</i>
+                    <span class="tool-name"><b>Pr</b> Premiere Pro</span><i aria-hidden="true">✳</i>
+                    <span class="tool-name"><b>Ae</b> After Effects</span><i aria-hidden="true">✳</i>
+                </div>
+                <div class="tools-set" aria-hidden="true">
+                    <span class="tool-name"><b>Ps</b> Photoshop</span><i>✳</i>
+                    <span class="tool-name"><b>Ai</b> Illustrator</span><i>✳</i>
+                    <span class="tool-name"><b>Pr</b> Premiere Pro</span><i>✳</i>
+                    <span class="tool-name"><b>Ae</b> After Effects</span><i>✳</i>
                 </div>
             </div>
-        </a>
+        </section>
 
-    </div>
-    <br>
-    <br>
-    <div class="see-all-btn-container">
-        <a href="projets.html" class="btn-link hover-target">Voir tous les projets</a>
-</section>
+        <section class="work-section page-section" id="projets" aria-labelledby="work-title">
+            <div class="section-heading">
+                <p class="eyebrow">01 / Sélection</p>
+                <h2 id="work-title">Projets<br><em>choisis.</em></h2>
+                <p class="section-intro">Neuf projets entre graphisme, photographie et création visuelle.</p>
+            </div>
 
-        <section id="about" class="section">
-            <div class="about-container">
-                <div class="about-text">
-                    <h2 class="section-title">Parcours <span>/02</span></h2>
-                    <p>Passionnée par la capture de l'instant et la structure du pixel. Mon passage par le <strong>Bac Pro Com' Visuelle</strong>
-                        et le <strong>BUT MMI</strong> m'a appris une chose : </p>
-                        <p>une image ne vaut rien sans <strong>INTENTION!</strong></p>
-                        <br>
-                        <br>
-                    <a href="assets/pdf/CV.pdf" class="btn-link hover-target">Mon CV</a>
+            <div class="work-grid">
+                <details class="work-card project-feature">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/P1162519.jpg" alt="Photographie du projet Skin Stories" loading="lazy"><span class="work-index">01</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">PHOTO / ÉDITION</span><span class="work-title">Skin Stories</span>
+                    </summary>
+                    <div class="project-content"><p>Une exploration de l'identité à travers le tatouage, entre iconographie du Japon traditionnel et imaginaires contemporains du manga et du cyberpunk. Photographies et compositions éditoriales racontent l'histoire derrière chaque motif.</p><div class="project-gallery"><img src="assets/img/tatouage traditionnel.png" alt="Composition éditoriale autour du tatouage traditionnel" loading="lazy"><img src="assets/img/tatouage pop culture.png" alt="Composition éditoriale autour de la pop culture" loading="lazy"></div><a class="project-resource" href="assets/pdf/Livrable3_Skin_Stories_Project_G2.pdf" target="_blank" rel="noopener">Consulter le livret PDF ↗</a></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/liberatori-glucometer-5977172.jpg" alt="Visuel du projet Diabète : reconnaître et agir" loading="lazy"><span class="work-index">02</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">DESIGN / PRÉVENTION</span><span class="work-title">Diabète : reconnaître & agir</span>
+                    </summary>
+                    <div class="project-content"><p>Trois affiches pédagogiques transforment des informations médicales en repères accessibles : reconnaître hypo- et hyperglycémie, comprendre le matériel de contrôle et utiliser un spray d'urgence. Une hiérarchie claire et des codes couleur facilitent la lecture rapide.</p><a class="project-resource" href="assets/pdf/DIABÈTE  RECONNAÎTRE ET AGIR.pdf" target="_blank" rel="noopener">Voir les affiches PDF ↗</a></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/after-effect-image.jpg" alt="Visuel du projet Internet Super Média" loading="lazy"><span class="work-index">03</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">MOTION DESIGN</span><span class="work-title">Internet Super Média</span>
+                    </summary>
+                    <div class="project-content"><p>Vulgarisation animée du modèle interactionniste d'Arnold H. Buss : comment personnalité et situation influencent nos comportements sur les réseaux sociaux. Le projet mêle recherche, storyboard et data visualisation en mouvement.</p><div class="project-gallery"><img src="assets/img/storyboard_1.png" alt="Storyboard, première étape" loading="lazy"><img src="assets/img/storyboard_2.png" alt="Storyboard, deuxième étape" loading="lazy"><img src="assets/img/storyboard_3.png" alt="Storyboard, troisième étape" loading="lazy"></div><a class="project-resource" href="https://youtu.be/gByJwVa5WjU" target="_blank" rel="noopener">Voir le motion design ↗</a></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/Salon des Vins des Vignerons Indépendants/3.png" alt="Photographie au Salon des Vins de Bordeaux" loading="lazy"><span class="work-index">04</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">PHOTOGRAPHIE</span><span class="work-title">Terroirs vivants</span>
+                    </summary>
+                    <div class="project-content"><p>Au Parc des Expositions de Bordeaux, un reportage sur les personnes, les gestes et les échanges du salon. Une approche sur le vif, portée par la lumière naturelle et les détails qui racontent le travail de la vigne.</p><div class="project-gallery project-gallery-wide"><img src="assets/img/Salon des Vins des Vignerons Indépendants/1.png" alt="Reportage au Salon des Vins, photo 1" loading="lazy"><img src="assets/img/Salon des Vins des Vignerons Indépendants/2.png" alt="Reportage au Salon des Vins, photo 2" loading="lazy"><img src="assets/img/Salon des Vins des Vignerons Indépendants/4.png" alt="Reportage au Salon des Vins, photo 4" loading="lazy"><img src="assets/img/Salon des Vins des Vignerons Indépendants/5.png" alt="Reportage au Salon des Vins, photo 5" loading="lazy"></div></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/magescq-tique.png" alt="Identité visuelle Magescq'tique" loading="lazy"><span class="work-index">05</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">IDENTITÉ VISUELLE</span><span class="work-title">Magescq'tique</span>
+                    </summary>
+                    <div class="project-content"><p>Création d'une identité de marque conçue pour rester reconnaissable sur différents supports. Le projet rassemble logo, règles typographiques, palette chromatique et déclinaisons de communication.</p><div class="project-gallery"><img src="assets/img/logo-magescq-tique.png" alt="Logo Magescq'tique" loading="lazy"><img src="assets/img/magescq-mockup-1.jpg" alt="Déclinaison graphique Magescq'tique" loading="lazy"><img src="assets/img/goodiesmagescq-mockup-2.jpg" alt="Objets de marque Magescq'tique" loading="lazy"></div><a class="project-resource" href="assets/pdf/Charte graphique.pdf" target="_blank" rel="noopener">Consulter la charte graphique ↗</a></div>
+                </details>
+
+                <details class="work-card project-feature">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/espingo-photo-scaled.jpg" alt="Paysage du projet Espingo" loading="lazy"><span class="work-index">06</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">REPORTAGE / GRAPHISME</span><span class="work-title">Espingo</span>
+                    </summary>
+                    <div class="project-content"><p>Un carnet de voyage pluridisciplinaire autour du dialogue entre l'humain et le paysage pyrénéen : reportage vidéo, photographie, recherches d'identité et dépliant pédagogique. Le logo finaliste traduit la rencontre entre géométrie et matière minérale.</p><div class="project-gallery"><img src="assets/img/planche contacte .png" alt="Planche contact photographique d'Espingo" loading="lazy"><img src="assets/img/espingo/1000030570-scaled.jpg" alt="Recherches graphiques du projet Espingo" loading="lazy"><img src="assets/img/espingo/Planche-espingo-1024x656.png" alt="Planche du dépliant Espingo" loading="lazy"></div><a class="project-resource" href="https://www.youtube.com/watch?v=CEKLjkym_jA" target="_blank" rel="noopener">Voir le reportage vidéo ↗</a></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/ARCACHON.jpeg" alt="Affiche illustrée d'Arcachon" loading="lazy"><span class="work-index">07</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">ILLUSTRATION / AFFICHE</span><span class="work-title">Souvenirs de villes</span>
+                    </summary>
+                    <div class="project-content"><p>Une collection d'affiches inspirées des carnets de voyage. Les monuments sont réduits à leurs silhouettes essentielles, dans des palettes de couleurs liées à la lumière et à l'atmosphère de chaque ville.</p><div class="project-gallery project-gallery-wide"><img src="assets/img/ARCACHON.jpeg" alt="Affiche Arcachon" loading="lazy"><img src="assets/img/BIARRITZ.jpg.png" alt="Affiche Biarritz" loading="lazy"><img src="assets/img/BORDEAUX.jpg" alt="Affiche Bordeaux" loading="lazy"><img src="assets/img/NICE.jpg.png" alt="Affiche Nice" loading="lazy"><img src="assets/img/PARIS.jpg" alt="Affiche Paris" loading="lazy"><img src="assets/img/monaco.jpg" alt="Affiche Monaco" loading="lazy"></div></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/thumb-1920-1345234.jpeg" alt="Illustration du comic The Echo of Heart" loading="lazy"><span class="work-index">08</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">NARRATION / ILLUSTRATION</span><span class="work-title">The Echo of Heart</span>
+                    </summary>
+                    <div class="project-content"><p>Un comic complet autour de Sora, de la mémoire et de l'amitié. L'histoire mêle dessin traditionnel et éléments numériques dans un univers inspiré de Kingdom Hearts, avec un récit pensé en séquences et en cases.</p><a class="project-resource" href="assets/pdf/BARTHES_JADE_SoraL_EchoDesCoeurs.pdf" target="_blank" rel="noopener">Lire le comic complet ↗</a></div>
+                </details>
+
+                <details class="work-card">
+                    <summary class="project-summary">
+                        <span class="work-image"><img src="assets/img/mediatheque.png" alt="Maquette du site du Musée de l'Imprimerie de Nantes" loading="lazy"><span class="work-index">09</span><span class="project-plus" aria-hidden="true">+</span></span>
+                        <span class="work-kind">WEB DESIGN</span><span class="work-title">Musée de l'Imprimerie</span>
+                    </summary>
+                    <div class="project-content"><p>Une proposition de refonte web pour valoriser les collections historiques du musée de Nantes. Le travail cherche l'équilibre entre clarté de navigation, accès aux informations pratiques et richesse du patrimoine typographique.</p><a class="project-resource" href="https://mus-e-de-l-imprimerie-nantes.vercel.app/exposition.html" target="_blank" rel="noopener">Visiter le site du projet ↗</a></div>
+                </details>
+            </div>
+            <div class="lab-grid" aria-label="Expérimentations interactives">
+                <details class="lab-game">
+                    <summary><strong>Casse-brique</strong><span class="lab-plus" aria-hidden="true">+</span></summary>
+                    <iframe src="casse-brique/index.html" title="Jeu Casse-brique de Jade Barthes" loading="lazy"></iframe>
+                </details>
+                <details class="lab-game">
+                    <summary><strong>Memory visuel</strong><span class="lab-plus" aria-hidden="true">+</span></summary>
+                    <iframe src="memory/index.html" title="Jeu Memory visuel de Jade Barthes" loading="lazy"></iframe>
+                </details>
+            </div>
+        </section>
+
+        <section class="about-section" id="apropos" aria-labelledby="about-title">
+            <div class="about-inner page-section">
+                <p class="eyebrow">À propos</p>
+                <div class="about-copy">
+                    <h2 id="about-title">L'image raconte<br><em>quelque chose.</em></h2>
+                    <div class="about-body">
+                        <p>Passionnée par la capture de l'instant et la structure du pixel, j'explore le graphisme et la photographie pour donner vie à des univers singuliers.</p>
+                        <p>Du Bac Pro Communication Visuelle au BUT MMI, mon parcours m'a appris qu'une image ne vaut rien sans intention.</p>
+                    </div>
+                    <div class="about-bottom">
+                        <a class="button button-outline" href="assets/pdf/CV.pdf" target="_blank" rel="noopener">Voir mon CV <span aria-hidden="true">↗</span></a>
+                        <p><strong>Actuellement</strong><br>Études en BUT MMI · Bordeaux</p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section class="contact-section page-section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-heading">
+                <p class="eyebrow">Contact</p>
+                <h2 id="contact-title">On imagine<br><em>la suite ?</em></h2>
+                <p>Une idée, un projet ou simplement envie de discuter ? Ma boîte mail est ouverte.</p>
+                <a class="contact-email" href="mailto:jadebarthesperso@gmail.com">jadebarthesperso@gmail.com <span aria-hidden="true">↗</span></a>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/pickjad/" target="_blank" rel="noopener">Instagram ↗</a>
+                    <a href="https://www.linkedin.com/in/jade-barthes-762510387/" target="_blank" rel="noopener">LinkedIn ↗</a>
+                </div>
+            </div>
+            <form action="https://formspree.io/f/meerbovr" method="POST" class="contact-form">
+                <label for="name">Nom / entreprise</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.fr" required>
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Parlez-moi de votre projet..." required></textarea>
+                <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Jade">
+                <input type="text" name="_gotcha" class="form-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <button class="button button-primary" type="submit">Envoyer le message <span aria-hidden="true">↗</span></button>
+            </form>
         </section>
     </main>
 
-    
-    <footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <p>&copy; 2026 Jade Barthes - Fait avec passion et quelques lignes de code.</p>
-            <p class="legal-text">
-                Tous droits réservés. L'ensemble des contenus (photographies, designs, logos et code) 
-                présents sur ce site sont la propriété exclusive de Jade Barthes. 
-                Toute reproduction ou utilisation sans autorisation préalable est strictement interdite.
-            </p>
-        </div>
-        
-        <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/jade-barthes-762510387/" target="_blank" class="hover-target">LinkedIn</a>
-            <a href="https://www.instagram.com/pickjad/" target="_blank" class="hover-target">Instagram</a>
-        </div>
-    </div>
-</footer>
-<script src="script.js"></script>
+    <footer class="site-footer">
+        <a class="footer-brand" href="#accueil">Jade Barthes <span>© 2026</span></a>
+        <p>Une page, plusieurs univers. Fait à Bordeaux.</p>
+        <a href="#accueil">Retour au début ↑</a>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
