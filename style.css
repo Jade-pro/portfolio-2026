@@ -1803,7 +1803,6 @@ footer {
 .work-card:nth-child(5) { grid-column: span 4; }
 .work-card:nth-child(6) { grid-column: span 8; }
 .work-card:nth-child(9) { grid-column: span 5; }
-.work-card[open] { grid-column: 1 / -1; }
 .project-summary { display: block; list-style: none; cursor: pointer; }
 .project-summary::-webkit-details-marker { display: none; }
 .work-image { display: block; aspect-ratio: 1.18; background: #d9d4ed; }
